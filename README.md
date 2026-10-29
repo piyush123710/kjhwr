@@ -8,30 +8,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg)]()
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC.svg)]()
 [![Docker](https://img.shields.io/badge/Docker-enabled-2496ED.svg)]()
-
-> **Live Application URL**: [https://ais-pre-3cnr5hl6t7diod4rgmlfb2-848281282336.asia-southeast1.run.app](https://ais-pre-3cnr5hl6t7diod4rgmlfb2-848281282336.asia-southeast1.run.app)  
-> **Development Preview URL**: [https://ais-dev-3cnr5hl6t7diod4rgmlfb2-848281282336.asia-southeast1.run.app](https://ais-dev-3cnr5hl6t7diod4rgmlfb2-848281282336.asia-southeast1.run.app)
-
----
-
-## Table of Contents
-
-1. [Executive Summary & Business Context](#1-executive-summary--business-context)
-2. [Elexon BMRS Datasets & Granularity Nuances](#2-elexon-bmrs-datasets--granularity-nuances)
-3. [Day-Ahead Decision Cutoff & Forecast Selection Methodology](#3-day-ahead-decision-cutoff--forecast-selection-methodology)
-4. [Statistical Accuracy Metrics & Mathematical Formulations](#4-statistical-accuracy-metrics--mathematical-formulations)
-5. [System Architecture & Data Pipeline](#5-system-architecture--data-pipeline)
-6. [Application Feature Walkthrough](#6-application-feature-walkthrough)
-7. [Technology Stack](#7-technology-stack)
-8. [Repository Folder Structure](#8-repository-folder-structure)
-9. [Local Setup & Running Instructions](#9-local-setup--running-instructions)
-10. [Docker & Containerized Deployment](#10-docker--containerized-deployment)
-11. [Automated Testing Suite](#11-automated-testing-suite)
-12. [Environment Variables Reference](#12-environment-variables-reference)
-13. [Limitations & Market Boundary Disclosures](#13-limitations--market-boundary-disclosures)
-14. [Assignment Submission Guide](#14-assignment-submission-guide)
-15. [AI Tools Usage Disclosure](#15-ai-tools-usage-disclosure)
-
 ---
 
 ## 1. Executive Summary & Business Context
