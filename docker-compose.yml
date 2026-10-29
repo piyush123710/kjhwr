@@ -1,0 +1,38 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: windsight-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ELEXON_API_BASE_URL=https://data.elexon.co.uk/bmrs/api/v1
+      - CACHE_FILE_PATH=/app/data/elexon_jan2026_cache.json
+      - DAY_AHEAD_CUTOFF_MODE=d_minus_1_1100
+      - INTERVAL_ALIGNMENT_MODE=strict_exact
+      - MAPE_MIN_ACTUAL_MW_THRESHOLD=100
+    volumes:
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: windsight-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - VITE_API_BASE_URL=/api/v1
+      - ELEXON_API_BASE_URL=https://data.elexon.co.uk/bmrs/api/v1
+      - CACHE_FILE_PATH=/app/data/elexon_jan2026_cache.json
+    depends_on:
+      backend:
+        condition: service_healthy
